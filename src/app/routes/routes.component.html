@@ -1,0 +1,17 @@
+
+<!--<input type="text" #newSearch (keyup.enter)="searchFor(newSearch.value)"-->
+<!--(blur)="searchFor(newSearch.value); newSearch.value=''">-->
+<input [(ngModel)]="pysakki">
+<button (click)="searchFor()">Search</button>
+
+
+<h4>
+  {{pysakki}}
+</h4>
+<p>{{message}}</p>
+<ul>
+  <li *ngFor="let stop of stopdata;">
+    {{ stop.name }}, {{ stop.route.shortName }}, {{ stop.route.longName }}
+  </li>
+</ul>
+
